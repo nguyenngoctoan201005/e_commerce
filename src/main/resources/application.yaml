@@ -1,0 +1,30 @@
+server:
+  port: ${PORT:8080}
+  servlet:
+    context-path: /ecommerce
+
+  error:
+    include-message: never
+    include-binding-errors: never
+    include-exception: false
+
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:mysql://localhost:3306/e_commerce}
+    username: ${SPRING_DATASOURCE_USERNAME:root}
+    password: ${SPRING_DATASOURCE_PASSWORD:root}
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: false
+
+jwt:
+  signerKey: ${JWT_SIGNER_KEY:1TjXchw5FloESb63Kc+DFhTARvpWL4jUGCwfGWxuG5SIf/1y/LgJxHnMqaF6A/ij}
+  valid-duration: ${JWT_VALID_DURATION:3600} # in seconds
+  refreshable-duration: ${JWT_REFRESHABLE_DURATION:36000} # in seconds
+
+

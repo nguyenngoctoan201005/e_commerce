@@ -1,0 +1,10 @@
+target/classes
+target/generated-sources
+target/maven-status
+target/surefire-reports
+target/*.jar.original
+.git
+.idea
+.vscode
+*.log
+
